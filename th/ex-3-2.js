@@ -7,7 +7,52 @@
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ในโค้ดด้านล่าง
 */
 
+/* Operation พื้นฐาน (กระบวนการพื้นฐาน) 7 ประเภท:
+1. การแสดงผลลัพธ์ -> console.log()
+2. การกำหนดค่า/assign or re-assign -> = 
+3. การบวก/ลบ/คูณ/หาร 
+4. การเปรียบเทียบ -> <, >, === 
+5. การดำเนินการทางตรรกะ -> AND OR NOT
+6. If-Else 
+7. Loop
+*/
+
+/* 
+1. list operation ว่าใช้ concept อะไรบ้าง
+  loop
+  เอามาเฉพาะคะแนนของคนที่อยู่ในห้องนั้น -> ต้องมีเงื่อนไข
+  if-else
+  มีการบวก/ลบ/คูณ/หาร 
+  การเปรียบเทียบ -> <, >, === 
+  return คะแนนเฉลี่ย ->  การกำหนดค่า/assign or re-assign -> = 
+2. ลองเขียน step ออกมา
+  1. ประกาศตัวแปรทดเพื่อ
+    1.1 เก็บคะแนนรวม
+    1.2 นับจำนวนคนที่จะเอามาหารเพื่อหาค่าเฉลี่ย
+  2. loop เข้าไปเพื่อตรวจสอบสมาชิกแต่ละตัว
+  3. if-else มาการเปรียบเทียบมาจับว่าสมาชิกตัวนั้นๆอยู่ห้องที่อยากเอามาคำนวณ === classNumber
+    3.1 กรณีอยู่ห้องที่อยากเอามาคำนวณ ต้องเอามาคำนวณ
+    3.2 กรณีอยู่คนละห้อง ไม่ต้องทำอะไร ช่างมัน
+ 4. return คะแนนเฉลี่ย
+
+3. แปลง step เป็นโค้ด
+*/
+
 // Start coding here
+
+function calculateAverageScore(scores, searchClassNumber){
+  let totalScore = 0;
+  let studentCount = 0;
+
+  for (const student of scores) {
+    console.log(student);
+    if(student["classNumber"] === searchClassNumber){
+      totalScore += student["mathScore"];
+      studentCount += 1;
+    }
+  }
+  return totalScore/studentCount;
+}
 
 const scores = [
   { firstname: "Isabel", lastname: "Moore", classNumber: 3, mathScore: 78 },

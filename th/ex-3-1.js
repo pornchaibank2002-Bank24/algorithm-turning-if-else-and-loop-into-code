@@ -6,6 +6,17 @@
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ในโค้ดด้านล่าง
 */
 
+/* 
+1. list operation ว่าใช้ concept อะไรบ้าง
+  loop
+  // จะนับจำนวนได้ต้องบอกได้ก่อนว่า เป็นหมาสายพันธุ์ไหน
+  if-else
+    1. ถ้ายังไม่เคยเจอหมาสายพันธ์ุนั้นเลย -> ต้องนับสายพันธุ์นั้นครั้งแรก
+    2. เคยเจอหมาสายพันธุ์นั้นแล้ว -> เอาจำนวนเดิมมาบวก 1
+2. ลองเขียน step ออกมา
+3. แปลง step เป็นโค้ด
+*/
+
 // Start coding here
 
 const breedArray1 = [
@@ -53,6 +64,8 @@ const breedArray1 = [
     "German Shepherd": 10,
   };
   
+  // objName["key"] ->
+  // objName.key -> Dot notation
   console.log(dogFrequency["German Shepherd"]); // 10
   console.log(dogFrequency["Shih Tzu"]); // undefined
   
